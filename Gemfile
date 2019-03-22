@@ -15,6 +15,10 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", ">= 3.4.1"
 gem "font-awesome-rails"
 gem "jquery-rails"
+gem "will_paginate", "~> 3.1.0"
+gem "betterlorem", "~> 0.1.2"
+gem "will_paginate-bootstrap"
+gem "config"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
