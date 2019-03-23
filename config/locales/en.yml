@@ -1,2 +1,7 @@
 en:
-  app_title: "My Blog"
+  app_title: "Kai Blog"
+  error: "Error"
+  not_found:
+    description: "Dữ liệu bạn đang tìm kiếm đã bị xoá bỏ hoặc không tồn tại."
+    back_to_home: "Way back home!"
+    post: "Không tìm thấy bài viết!"
