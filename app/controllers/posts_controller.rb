@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   private
   def find_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:slug])
     unless @post
       flash[:danger] = t"not_found.post"
       redirect_to not_found_index_path
