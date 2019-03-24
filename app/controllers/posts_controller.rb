@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: :show
   def index
     @posts = Post.paginate(page: params[:page], per_page: Settings.page_posts_size).order(id: :desc)
+    @categories = Category.all
   end
 
   def show

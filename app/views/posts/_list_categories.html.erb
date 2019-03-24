@@ -1,0 +1,16 @@
+<h2>Categories</h2>
+<hr>
+<% categories.each do |category| %>
+  <div class="pmd-card pmd-card-default pmd-z-depth">
+    <div class="pmd-card-title">
+      <div class="media-left">
+        <a class="avatar-list-img" href="javascript:void(0);">
+          <img src=<%= category.avatar_url %> width="50" height="50">
+        </a>
+      </div>
+      <div class="media-body media-middle">
+        <span class="pmd-card-title-text"><%= category.name %></span>
+      </div>
+    </div>
+  </div>
+<% end %>
