@@ -13,17 +13,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <% @categories.each do |category| %>
+          <li>
+            <%= link_to(category.name, category) %>
+          </li>
+        <% end %>
         <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Sample Post</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
+          <a href="#">Login</a>
         </li>
       </ul>
     </div>

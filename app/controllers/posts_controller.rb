@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :find_post, only: :show
   def index
     @posts = Post.paginate(page: params[:page], per_page: Settings.page_posts_size).order(id: :desc)
-    @categories = Category.all
   end
 
   def show
@@ -12,7 +11,7 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find_by_slug(params[:slug])
     unless @post
-      flash[:danger] = t"not_found.post"
+      flash[:danger] = t "not_found.post"
       redirect_to not_found_index_path
     end
   end
