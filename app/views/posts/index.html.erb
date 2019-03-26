@@ -1,13 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
       <% @posts.each do |post| %>
         <%= render "post_item", post: post %>
       <% end %>
       <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-    </div>
-    <div class="col-sm-3">
-      <%= render "list_categories", categories: @categories %>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 catgories = Category.create([
-                                { name: "Management", avatar_url: "https://previews.123rf.com/images/wad/wad1510/wad151000139/46545629-human-resources-management-icon-business-concept-flat-design-isolated-illustration-.jpg" },
-                                { name: "Startup", avatar_url: "https://autoattend.com/assets/startup.png" },
-                                { name: "Freelancer", avatar_url: "https://cdn1.iconfinder.com/data/icons/data-science-1-1/512/20-512.png" },
+                                { name: "Management" },
+                                { name: "Startup" },
+                                { name: "Freelancer" },
                             ])
 puts "Generate categories"
 
