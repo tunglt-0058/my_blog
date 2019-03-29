@@ -19,7 +19,7 @@
           </li>
         <% end %>
         <li>
-          <a class="login-modal">Login</a>
+          <a onclick="showModal()">Login</a>
         </li>
       </ul>
     </div>
@@ -27,3 +27,9 @@
   </div>
   <!-- /.container -->
 </nav>
+<script>
+    function showModal() {
+        $('#form-login-modal').html('<%= j render "devise/sessions/form_modal" %>');
+        $('#form-login-modal').modal('show');
+    }
+</script>
