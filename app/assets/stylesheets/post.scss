@@ -1,0 +1,233 @@
+.post-mini,
+.post {
+  .post-header {
+    margin-bottom: 10px;
+    position: relative;
+
+    .post-actions {
+      display: none;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+
+      .post-edit,
+      .post-delete {
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+
+    .post-title {
+      .title {
+        display: inline-block;
+        font-weight: bolder;
+        word-break: break-word;
+      }
+
+      .star {
+        color: rgb(247, 219, 18);;
+        display: inline-block;
+      }
+    }
+
+    .post-date {
+      font-size: 12px;
+    }
+
+    .post-game {
+      h5 {
+        display: inline-block;
+        word-break: break-word;
+      }
+    }
+  }
+
+  .post-body {
+    margin-bottom: 10px;
+
+    .game-cover {
+      float: left;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
+    .exten-cover {
+      width: 100%;
+    }
+  }
+
+  .post-footer {
+    .post-read-more {
+      float: left;
+
+      .btn-read-more {
+        background-color: #999999;
+        color: white;
+      }
+    }
+
+    .post-action {
+      float: right;
+
+      .post-like,
+      .post-dislike,
+      .post-comment {
+        padding: 2px;
+      }
+
+      .emotition-like,
+      .emotition-dislike,
+      .post-comment-action {
+        text-decoration: none;
+      }
+
+      .emotition-like:hover,
+      .emotition-dislike:hover,
+      .post-comment-action:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .post-comments {
+    .read-more-comment {
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      .read-more {
+        display: inline-block;
+
+        .btn-read-more {
+          background-color: #999999;
+          color: white;
+        }
+
+        .btn-read-more,
+        .btn-read-more:hover {
+          text-decoration: none;
+        }
+      }
+
+      .hide-comment {
+        display: none;
+
+        .btn-hide {
+          background-color: #999999;
+          color: white;
+        }
+
+        .btn-hide,
+        .btn-hide:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.new-post,
+.edit-post {
+  .container {
+    background-color: white;
+    padding: 15px;
+
+    .field {
+      margin-bottom: 20px;
+
+      .rate-label {
+        margin-right: 10px;
+      }
+
+      .fa-star {
+        color: #333333;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .active-star {
+        color: #f7db12 !important;
+      }
+    }
+
+    .editable {
+      height: auto;
+      min-height: 200px;
+    }
+
+    .medium-editor-hidden {
+      display: none;
+    }
+
+    .actions {
+      margin-top: 10px;
+      float: right;
+    }
+
+    .game-post {
+      .game-post-left {
+        margin-bottom: 20px;
+        .game-post-cover {
+          max-height: 300px;
+        }
+      }
+
+      .game-post-right {
+        .game-name {
+          a {
+            color: black;
+          }
+        }
+
+        .game-genre {
+          .genre-title {
+            display: inline-block;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+
+.post {
+  .container {
+    background-color: white;
+
+    .post-left {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 5px 10px;
+    }
+
+    .post-right {
+      padding: 5px;
+
+      .top-5,
+      .recent {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px;
+      }
+
+      .top-5:hover,
+      .recent:hover {
+        background-color: #ccc;
+      }
+
+      .recent-list {
+        display: none;
+      }
+
+      .active {
+        background-color: #ccc;
+      }
+
+      ul {
+        -webkit-padding-start: 0px;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}
