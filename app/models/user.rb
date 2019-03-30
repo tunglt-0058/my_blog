@@ -6,5 +6,4 @@ class User < ApplicationRecord
             format: {with: Devise.email_regexp}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
             length: {within: Devise.password_length}, allow_nil: true
-  validates :name, presence: true, length: {maximum: 50}
 end

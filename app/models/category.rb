@@ -1,6 +1,5 @@
 class Category < ApplicationRecord
-  has_many :post_categories
-  has_many :posts, through: :post_categories, dependent: :destroy
+  has_many :posts, dependent: :destroy
   before_save :to_slug
   def to_param
     slug

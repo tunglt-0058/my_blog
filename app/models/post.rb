@@ -1,6 +1,9 @@
 class Post < ApplicationRecord
-  has_many :post_categories
-  has_many :categories, through: :post_categories, dependent: :destroy
+  belongs_to :category
+
+  validates :category, presence: true
+  validates :title, presence: true
+  validates :content, presence: true
   before_save :to_slug
   def to_param
     slug
