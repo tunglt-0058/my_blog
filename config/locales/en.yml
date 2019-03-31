@@ -6,3 +6,6 @@ en:
     back_to_home: "Way back home!"
     post: "Không tìm thấy bài viết!"
     category: "không tìm thấy category!"
+  post_create:
+    success: "Tạo bài viết mới thành công!"
+    fail: "Tạo bài viết mới thất bại!"

@@ -1,0 +1,4 @@
+<% if @post.errors.any? %>
+$('.post-form-errors')
+    .html('<%= j render "shared/error_messages", object: @post %>');
+<% end %>
