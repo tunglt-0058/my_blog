@@ -12,5 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require medium-editor/medium-editor.min
+ *= require medium-editor/medium-editor-insert-plugin.min
+ *= require medium-editor/medium-editor-insert-plugin-frontend.min
  *= require font-awesome
  */
