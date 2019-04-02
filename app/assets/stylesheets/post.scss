@@ -19,3 +19,24 @@
     }
   }
 }
+
+.post-mini,
+.post {
+  .post-header {
+    margin-bottom: 10px;
+    position: relative;
+
+    .post-actions {
+      display: none;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+
+      .post-edit,
+      .post-delete {
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+  }
+}

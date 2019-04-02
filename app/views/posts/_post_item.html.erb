@@ -7,6 +7,7 @@
       <h2 class="pmd-card-title-text">
         <%= link_to(post.title, post) %>
       </h2>
+      <br>
       <span class="pmd-card-subtitle-text">
         <p><%= truncate(strip_tags(post.content), length: 300) %></p>
       </span>
@@ -20,4 +21,7 @@
       </a>
     </div>
   </div>
+  <% if current_user && current_user == post.user %>
+    <%= render "post_action", post: post %>
+  <% end %>
 </div>

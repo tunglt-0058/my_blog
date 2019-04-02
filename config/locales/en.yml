@@ -9,3 +9,9 @@ en:
   post_create:
     success: "Tạo bài viết mới thành công!"
     fail: "Tạo bài viết mới thất bại!"
+  post_update:
+    success: "Sửa bài viết thành công!"
+    fail: "Sửa bài viết thất bại!"
+  post_delete:
+    success: "Xoá bài viết thành công!"
+    fail: "Xoá bài viết thất bại!"

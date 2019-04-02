@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: :show
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :find_post, except: [:index, :new, :create]
+  before_action :authenticate_user!, except: [:index, :show]
   skip_before_action :verify_authenticity_token
 
   def index
@@ -29,6 +29,18 @@ class PostsController < ApplicationController
         format.js
       end
     end
+  end
+  def edit
+  end
+
+  def update
+    @post.update_attributes(post_params) ? flash[:success] = t("post_update.success") : flash[:danger] = t("post_create.fail")
+    redirect_to @post
+  end
+
+  def destroy
+    @post.destroy ? flash[:success] = t("post_delete.success") : flash[:danger] = t("post_delete.fail")
+    redirect_to root_path
   end
 
   private
