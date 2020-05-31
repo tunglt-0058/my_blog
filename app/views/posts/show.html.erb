@@ -5,11 +5,14 @@
         <h1><%= @post.title %></h1><br>
         <span class="meta">Posted by <a href="https://github.com/letattung">Kai</a> on <%= @post.created_at %></span>
         <br><br>
-        <% if current_user && current_user == post.user %>
+        <% if current_user && current_user == @post.user %>
           <div class="post-actions">
             <%= render "posts/post_action", post: @post %>
           </div>
         <% end %>
+      </div>
+      <div class="img-responsive">
+        <%= image_tag post_image(@post), :size => '800x500' %>
       </div>
       <article>
         <%= raw @post.content %>

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_080913) do
     t.string "title"
     t.text "content"
     t.string "slug"
-    t.string "image_url"
+    t.string "image"
     t.integer "user_id", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false

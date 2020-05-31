@@ -11,17 +11,17 @@
       <span class="pmd-card-subtitle-text">
         <p><%= truncate(strip_tags(post.content), length: 300) %></p>
       </span>
-      <p class="post-meta">Posted by <a href="https://github.com/letattung">Kai</a> on <%= post.created_at %></p>
+      <p class="post-meta">Posted by <a href="https://github.com/tunglt-0058">Kai</a> on <%= post.created_at %></p>
     </div>
 
     <!-- Card media image -->
     <div class="media-right media-middle">
       <a href="javascript:void(0);">
-        <img width="152" height="152" src=<%= post.image_url %>>
+        <img width="152" height="152" src=<%= post.image %>>
       </a>
     </div>
   </div>
   <% if current_user && current_user == post.user %>
-    <%= render "post_action", post: post %>
+    <%= render "posts/post_action", post: post %>
   <% end %>
 </div>
