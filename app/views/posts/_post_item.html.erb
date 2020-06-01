@@ -7,11 +7,10 @@
       <h2 class="pmd-card-title-text">
         <%= link_to(post.title, post) %>
       </h2>
-      <br>
       <span class="pmd-card-subtitle-text">
-        <p><%= (post.content).truncate(50) %></p>
+        <p><%= (post.content).truncate(100) %></p>
       </span>
-      <p class="post-meta">Posted by <a href="https://github.com/tunglt-0058">Kai</a> on <%= post.created_at.strftime("%B %d %Y") %></p>
+      <p class="post-meta">Posted by <a href="https://github.com/tunglt-0058/my_blog">Kai</a> on <%= post.created_at.strftime("%B %d %Y") %></p>
     </div>
 
     <!-- Card media image -->

@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :category, presence: true
   validates :user, presence: true
   validates :title, presence: true
+  validates :summary, presence: true
   validates :content, presence: true
   validates :image, presence: true
 
