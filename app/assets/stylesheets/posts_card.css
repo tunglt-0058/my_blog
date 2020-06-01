@@ -194,3 +194,12 @@ a {
     margin: 0;
   }
 }
+
+.title {
+  font-family: 'Mina', sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  color: #fb5e73;
+  text-align: center;
+  margin: 35px 0;
+}

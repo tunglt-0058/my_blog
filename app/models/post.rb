@@ -13,6 +13,14 @@ class Post < ApplicationRecord
   before_save :to_slug
 
   mount_uploader :image, ImageUploader
+
+  class << self
+    def search data
+      data = data.downcase
+      Post.where "lower(title) LIKE ?", "%#{data}%"
+    end
+  end
+
   def to_param
     slug
   end

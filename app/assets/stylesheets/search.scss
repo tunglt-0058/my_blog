@@ -1,0 +1,53 @@
+.search-index {
+  margin-top: 20px;
+}
+
+.show-result {
+  padding: 45px;
+  margin-bottom: 20px;
+
+  .result-posts {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .result-posts:hover {
+    background-color: #f7db12;
+  }
+
+  .active {
+    background-color: #f7db12;
+  }
+}
+.result-posts-list {
+  margin: 40px 20px 20px -30px;
+}
+
+.a-seach-show {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  .head {
+    margin-bottom: 30px;
+  }
+
+  .genres-list {
+    .genre-check-box {
+      -webkit-transform: scale(1.2);
+    }
+
+    .genre-name {
+      margin-right: 10px;
+      font-size: 18px;
+      padding: 0 5px;
+    }
+  }
+}
+
+.as-list-product-item {
+  margin-bottom: 20px;
+}
+
+.results {
+  background-color: white;
+}

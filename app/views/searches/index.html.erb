@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+      <div class="row result-posts-list">
+          <% if @results["posts"].empty? %>
+            <h1><%= t "not_found.post" %></h1>
+          <% else %>
+            <div class="area-contents section js-tab-content tab-content" id="cropstab">
+              <ul class="row3 media-list crops-list">
+                <% @results["posts"].each do |post| %>
+                  <%= render "posts/post_item",  post: post %>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>

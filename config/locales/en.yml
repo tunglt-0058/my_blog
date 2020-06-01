@@ -1,6 +1,8 @@
 en:
-  app_title: "Kai Blog"
+  app_title: "SBS"
+  app_name: "SunBearSensei"
   error: "Error"
+  search: "Search"
   not_found:
     description: "Dữ liệu bạn đang tìm kiếm đã bị xoá bỏ hoặc không tồn tại."
     back_to_home: "Way back home!"
