@@ -4231,10 +4231,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
+.container-fluid > .header-search {
+  padding: 7px;
+  padding-top: 9px;
+}
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
+  .container-fluid > .header-search
   .container-fluid > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;

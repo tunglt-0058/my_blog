@@ -9,7 +9,19 @@
       </button>
       <a class="navbar-brand" href="/"><%= t("app_title") %></a>
     </div>
-
+    <div class="navbar-header header-search col-md-5">
+      <%= form_tag searches_path, method: :get, class: "form-search" do %>
+        <span>
+          <%= text_field_tag :search, params[:search], autocomplete: :off,
+            placeholder: t("search"), class: "form-control posts-search",
+            id: "posts-search" %>
+        </span>
+      <% end %>
+      <span class="search-results">
+        <ul class="results">
+        </ul>
+      </span>
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
