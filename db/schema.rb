@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_080913) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
+    t.string "summary"
     t.text "content"
     t.string "slug"
     t.string "image"
