@@ -1,2 +1,3 @@
 page_posts_size: 10
 search_objects: ["Post"]
+page_tags_show_size: 20

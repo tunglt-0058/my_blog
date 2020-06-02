@@ -9,6 +9,6 @@ class Category < ApplicationRecord
 
   private
   def to_slug
-    self.slug = self.name.parameterize.truncate(80, omission: "")+ "-" + SecureRandom.base64(12).to_s
+    self.slug = self.name.parameterize.truncate(80, omission: "")+ "-" + SecureRandom.uuid
   end
 end

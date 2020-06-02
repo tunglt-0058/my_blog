@@ -6,7 +6,8 @@
     <div class="media-body">
       <h2 class="pmd-card-title-text">
         <%= link_to(post.title, post) %>
-      </h2>
+      </h2><br>
+      <%= render "posts/post_tag", post: post %>
       <span class="pmd-card-subtitle-text">
         <p><%= (post.content).truncate(100) %></p>
       </span>

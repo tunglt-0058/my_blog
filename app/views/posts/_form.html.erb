@@ -18,10 +18,17 @@
     <%= f.select :category_id, categories.map{|category|
       [category.name, category.id]}, {}, class: "form-control" %>
   </div>
+
   <div class="field">
     <label>Summary: </label>
     <%= f.text_field :summary, placeholder: "Enter your summary of post",
                      class: "form-control title" %>
+  </div>
+  <div class="field">
+    <label>Tags: </label>
+    <%= f.collection_select :tag_ids, Tag.all, :id, :title,
+          {}, {multiple: true, size: 1, class:"select-tags form-control pmd-select2-tags",
+          data: {placeholder: t("post_create.choose_tags")}} %>
   </div>
   <div class="field">
     <label>Content: </label>
@@ -34,3 +41,14 @@
   </div>
   <div class="clearfix"></div>
 <% end %>
+
+<!-- Propeller Select2 -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    <!-- Select Multiple Tags -->
+    $(".select-tags").select2({
+      tags: false,
+      theme: "bootstrap",
+    })
+  });
+</script>
