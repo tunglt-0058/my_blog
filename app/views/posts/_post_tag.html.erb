@@ -1,0 +1,7 @@
+<% if post.tags.present? %>
+  <ul class="sbs-tags">
+	  <% post.tags.each do |t| %>
+	    <li><a href="/tags/<%= t.slug %>" class="sbs-tag"><%= t.title %></a></li>
+	  <% end %>
+  </ul>
+<% end %>

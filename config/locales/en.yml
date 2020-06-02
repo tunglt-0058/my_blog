@@ -8,9 +8,11 @@ en:
     back_to_home: "Way back home!"
     post: "Không tìm thấy bài viết!"
     category: "không tìm thấy category!"
+    category: "không tìm thấy tag!"
   post_create:
     success: "Tạo bài viết mới thành công!"
     fail: "Tạo bài viết mới thất bại!"
+    choose_tags: "Select Multiple Tags"
   post_update:
     success: "Sửa bài viết thành công!"
     fail: "Sửa bài viết thất bại!"

@@ -11,3 +11,5 @@
 - [Write post](https://github.com/tiennh1995/grs/pull/25/files)
 ## Blog post
 - [Codepen.io](https://codepen.io/bacon/pen/akWzEp/)
+## Select multiple tags
+- [propeller-select2](https://propeller.in/components/select2.php)

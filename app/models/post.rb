@@ -3,6 +3,12 @@ require 'securerandom'
 class Post < ApplicationRecord
   belongs_to :category
   belongs_to :user
+  has_many :post_tags
+  has_many :tags, through: :post_tags
+  has_and_belongs_to_many :tags, join_table: :post_tags
+
+  accepts_nested_attributes_for :tags
+  accepts_nested_attributes_for :post_tags
 
   validates :category, presence: true
   validates :user, presence: true
@@ -28,6 +34,6 @@ class Post < ApplicationRecord
 
   private
   def to_slug
-    self.slug = self.title.parameterize.truncate(80, omission: "") + "-" + SecureRandom.base64(12).to_s
+    self.slug = self.title.parameterize.truncate(80, omission: "") + "-" + SecureRandom.uuid
   end
 end
