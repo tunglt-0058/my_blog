@@ -3,7 +3,7 @@
     
     <div class="bacon-blog-post-inner">
       <h2><%= @post.title %></h2><br>
-
+      <%= render "posts/post_tag", post: @post %><br>
       <img src=<%= @post.image %> class="wp-post-image">
       <h3><%= @post.summary %></h3>
       <p><%= @post.content %></p>
@@ -15,4 +15,4 @@
     </div>
   </div>
 </div>
-<%= render "posts/post_card", post: @post %>
+<%= render "posts/post_card", recommend_posts: @recommend_posts %>

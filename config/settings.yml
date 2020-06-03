@@ -1,3 +1,4 @@
 page_posts_size: 10
 search_objects: ["Post"]
 page_tags_show_size: 20
+load_recommend_posts: 3
