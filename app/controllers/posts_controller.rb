@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @recommend_posts = @post.recommend_posts.limit(Settings.load_recommend_posts).shuffle
   end
 
   def new

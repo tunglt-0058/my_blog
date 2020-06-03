@@ -1,4 +1,4 @@
-require 'securerandom'
+require "securerandom"
 
 class Post < ApplicationRecord
   belongs_to :category
@@ -20,6 +20,12 @@ class Post < ApplicationRecord
   before_save :to_slug
 
   mount_uploader :image, ImageUploader
+  scope :load_recommend_posts, -> (post_id){where.not(id: post_id)
+    .order id: :desc}
+
+  def recommend_posts
+    Post.load_recommend_posts self.id
+  end
 
   class << self
     def search data
@@ -34,6 +40,6 @@ class Post < ApplicationRecord
 
   private
   def to_slug
-    self.slug = self.title.parameterize.truncate(80, omission: "") + "-" + SecureRandom.uuid
+    self.slug = self.title.romaji.parameterize.truncate(80, omission: "") + "-" + SecureRandom.uuid
   end
 end
