@@ -13,3 +13,5 @@
 - [Codepen.io](https://codepen.io/bacon/pen/akWzEp/)
 ## Select multiple tags
 - [propeller-select2](https://propeller.in/components/select2.php)
+## Deploy rails app to GAE
+- [Using Cloud SQL for MySQL with Rails 5](https://cloud.google.com/ruby/rails/using-cloudsql-mysql)
