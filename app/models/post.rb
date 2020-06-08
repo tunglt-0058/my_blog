@@ -7,6 +7,9 @@ class Post < ApplicationRecord
   has_many :tags, through: :post_tags
   has_and_belongs_to_many :tags, join_table: :post_tags
 
+  has_many :bookmarks
+  has_many :bookmark_users, source: :bookmark_users, through: :bookmarks
+
   accepts_nested_attributes_for :tags
   accepts_nested_attributes_for :post_tags
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/bookmark", to: "bookmarks#index", as: "bookmark"
   devise_for :users
   root "posts#index"
   resources :posts, param: :slug

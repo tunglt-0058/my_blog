@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :bookmarks
+  has_many :bookmark_posts, source: :bookmark_posts, through: :bookmarks
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -9,4 +12,13 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: 50}
 
   has_many :posts, dependent: :destroy
+
+  def add_bookmark(post)
+    bookmarks.find_or_create_by(post_id: post.id)
+  end
+
+  def remove_bookmark(post)
+    bookmark = bookmarks.find_by(post_id: post.id)
+    bookmark.destroy if bookmark
+  end
 end
