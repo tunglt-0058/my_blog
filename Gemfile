@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.5.3"
+ruby ">= 2.5.3"
 
 gem "rails", "~> 5.2.2"
 gem "sqlite3", "~> 1.3.6"
@@ -41,8 +41,9 @@ group :test do
   gem "chromedriver-helper"
 end
 
+group :production do
+  gem "mysql2", "~> 0.5.3"
+end
+
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "mysql2", "~> 0.5.3"
-
 gem "appengine", "~> 0.5.0"
