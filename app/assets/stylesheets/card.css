@@ -117,4 +117,13 @@ h2.pmd-card-title-text {
     color: rgba(255, 255, 255, 0.54);
 }
 
+.bookmark_status {
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+.star {
+    color: red;
+}
+
 /*# sourceMappingURL=card.css.map */

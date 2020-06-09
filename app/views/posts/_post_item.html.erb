@@ -1,11 +1,25 @@
 <!--Title, Media, and Action area -->
 <div class="pmd-card pmd-card-media-inline pmd-z-depth">
+
   <!-- Card media -->
   <div class="pmd-card-media">
     <!-- Card media heading -->
     <div class="media-body">
       <h2 class="pmd-card-title-text">
         <%= link_to(post.title, post) %>
+        <% if current_user %>
+          <div class="bookmark_status">
+            <% if current_user.bookmarked(post) %>
+                <%= link_to un_checked_path(post.id) do %> 
+                  <i class="fa fa-star star"></i>
+                <% end %>
+            <% else %>
+              <%= link_to checked_path(post.id) do %> 
+                <i class="fa fa-star-o star"></i>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </h2><br>
       <%= render "posts/post_tag", post: post %>
       <span class="pmd-card-subtitle-text">

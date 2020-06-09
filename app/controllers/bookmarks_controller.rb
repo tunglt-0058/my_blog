@@ -6,4 +6,22 @@ class BookmarksController < ApplicationController
       redirect_to not_found_index_path
     end 
   end
+
+  def checked
+    @post = Post.find(params[:id])
+    current_user.add_bookmark(@post)
+    respond_to do |format|
+        format.html { redirect_back(fallback_location: root_path) }
+        format.js { render layout: false }
+    end    
+  end
+  
+  def un_checked
+    @post = Post.find(params[:id])
+    current_user.remove_bookmark(@post)
+    respond_to do |format|
+        format.html { redirect_back(fallback_location: root_path) }
+        format.js { render layout: false }
+    end
+  end
 end

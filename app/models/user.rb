@@ -21,4 +21,8 @@ class User < ApplicationRecord
     bookmark = bookmarks.find_by(post_id: post.id)
     bookmark.destroy if bookmark
   end
+
+  def bookmarked(post)
+    return bookmarks.where(post_id: post.id).exists?  
+  end
 end
