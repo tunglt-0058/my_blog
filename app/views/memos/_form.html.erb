@@ -1,0 +1,14 @@
+<div class="field">
+    <%= form_for memo, remote: true do |f| %>
+        <%= f.hidden_field :post_id, value: post.id %>
+        <% if !memo.new_record? %>
+            <%= f.text_area :content, placeholder: "enter a memo and click enter...",
+                class: "form-control title", rows: 10, value: memo.content%><br>
+            <%= f.submit "Update Memo", class: "btn pmd-btn-flat pmd-ripple-effect btn-primary" %>
+        <% else %>
+            <%= f.text_area :content, placeholder: "enter a memo and click enter...",
+                class: "form-control title", rows: 10, value: post.content%><br>
+            <%= f.submit "Create Memo", class: "btn pmd-btn-flat pmd-ripple-effect btn-primary" %>
+        <% end %>
+    <% end %>
+</div><br>

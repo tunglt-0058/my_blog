@@ -1,0 +1,10 @@
+<hr><%= memo.content %>
+<br><br>
+<div class="pmd-card-actions">
+    <%= link_to edit_memo_path(memo.id), remote: true do %>
+        <button class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button" id="edit-memo">Edit</button>
+    <% end %>
+    <%= link_to memo_path(memo.id), method: :delete, remote: true do %>
+        <button class="btn pmd-btn-flat pmd-ripple-effect btn-default" type="button" id="edit-memo">Delete</button>
+    <% end %>
+</div>

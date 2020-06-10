@@ -1,0 +1,3 @@
+$("#memo-form").html("<%= escape_javascript(render("form", memo: @memo, post: @post)) %>");
+$("#memo-form").attr("class", "collapse.in");
+$("#memo-show").attr("class", "collapse");

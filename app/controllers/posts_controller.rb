@@ -9,6 +9,8 @@ class PostsController < ApplicationController
 
   def show
     @recommend_posts = @post.recommend_posts.limit(Settings.load_recommend_posts).shuffle
+    @memo = @post.memos&.find_by(user: current_user)
+    @memo = current_user.memos.build if !@memo
   end
 
   def new

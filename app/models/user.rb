@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_posts, source: :bookmark_posts, through: :bookmarks
+  has_many :memos, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

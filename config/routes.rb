@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :categories, only: :show, param: :slug
   resources :tags, only: :show, param: :slug
   resources :searches, only: :index
+  resources :memos, only: [:create, :edit, :update, :destroy]
   get "*path", controller: "application", action: "render_404"
 end
