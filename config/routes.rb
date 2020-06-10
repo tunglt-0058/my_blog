@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get "/bookmark", to: "bookmarks#index", as: "bookmark"
+  get "checked/:id", to: "bookmarks#checked", as: "checked"
+  get "un_checked/:id", to: "bookmarks#un_checked", as: "un_checked"
   devise_for :users
   root "posts#index"
   resources :posts, param: :slug

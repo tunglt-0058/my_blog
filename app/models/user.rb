@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
   has_many :bookmark_posts, source: :bookmark_posts, through: :bookmarks
 
   devise :database_authenticatable, :registerable,
@@ -20,5 +20,9 @@ class User < ApplicationRecord
   def remove_bookmark(post)
     bookmark = bookmarks.find_by(post_id: post.id)
     bookmark.destroy if bookmark
+  end
+
+  def bookmarked(post)
+    return bookmarks.where(post_id: post.id).exists?  
   end
 end
