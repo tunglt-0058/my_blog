@@ -11,11 +11,11 @@
           <div class="bookmark_status">
             <% if current_user.bookmarked(post) %>
                 <%= link_to un_checked_path(post.id) do %> 
-                  <i class="fa fa-star star"></i>
+                  <span class="fa fa-star star" tool-tip-toggle="tooltip-bookmark" data-original-title="ブックマーク削除"></span>
                 <% end %>
             <% else %>
               <%= link_to checked_path(post.id) do %> 
-                <i class="fa fa-star-o star"></i>
+                <span class="fa fa-star-o star" tool-tip-toggle="tooltip-bookmark" data-original-title="ブックマーク追加"></span>
               <% end %>
             <% end %>
           </div>
@@ -39,3 +39,12 @@
     <%= render "posts/post_action", post: post %>
   <% end %>
 </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[tool-tip-toggle="tooltip-bookmark"]').tooltip({
+        placement : 'bottom'
+    });
+});
+</script>
