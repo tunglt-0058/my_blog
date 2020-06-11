@@ -10,8 +10,6 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
-  config.consider_all_requests_local = true
-
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -60,4 +58,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.consider_all_requests_local       = false
+  config.google_cloud.use_trace = false
+  config.google_cloud.use_logging = false
+  config.google_cloud.use_error_reporting = false
+  config.google_cloud.use_debugger = false
 end
