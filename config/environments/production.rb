@@ -91,4 +91,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.google_cloud.use_trace = false
+  config.google_cloud.use_logging = false
+  config.google_cloud.use_error_reporting = false
+  config.google_cloud.use_debugger = false
 end
