@@ -4,22 +4,10 @@
   <!-- Card media -->
   <div class="pmd-card-media">
     <!-- Card media heading -->
+    <%= render "bookmarks/bookmark_icon", post: post %><br>
     <div class="media-body">
       <h2 class="pmd-card-title-text">
         <%= link_to(post.title, post) %>
-        <% if current_user %>
-          <div class="bookmark_status">
-            <% if current_user.bookmarked(post) %>
-                <%= link_to un_checked_path(post.id) do %> 
-                  <span class="fa fa-star star" tool-tip-toggle="tooltip-bookmark" data-original-title="ブックマーク削除"></span>
-                <% end %>
-            <% else %>
-              <%= link_to checked_path(post.id) do %> 
-                <span class="fa fa-star-o star" tool-tip-toggle="tooltip-bookmark" data-original-title="ブックマーク追加"></span>
-              <% end %>
-            <% end %>
-          </div>
-        <% end %>
       </h2><br>
       <%= render "posts/post_tag", post: post %>
       <span class="pmd-card-subtitle-text">
@@ -39,12 +27,3 @@
     <%= render "posts/post_action", post: post %>
   <% end %>
 </div>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-    $('[tool-tip-toggle="tooltip-bookmark"]').tooltip({
-        placement : 'bottom'
-    });
-});
-</script>

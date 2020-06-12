@@ -1,7 +1,7 @@
 <div style="width: 810px; margin: 0 auto;">
   <div class="bacon-blog-post bacon-shadow">
-    
     <div class="bacon-blog-post-inner">
+      <%= render "bookmarks/bookmark_icon", post: @post %><br>
       <h2><%= @post.title %></h2><br>
       <%= render "posts/post_tag", post: @post %><br>
       <img src=<%= @post.image %> class="wp-post-image">
