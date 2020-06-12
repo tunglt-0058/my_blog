@@ -7,9 +7,19 @@
       <img src=<%= @post.image %> class="wp-post-image">
       <h3><%= @post.summary %></h3>
       <p><%= @post.content %></p>
-      <% if current_user && current_user == @post.user %>
-        <div class="post-actions">
-          <%= render "posts/post_action", post: @post %>
+      <% if user_signed_in? %>
+        <% if current_user == @post.user %>
+          <div class="post-actions">
+            <%= render "posts/post_action", post: @post %>
+          </div>
+        <% end %>
+        <hr>
+        <h3>My memo</h3>
+        <div id="memo-form" class=<% if !@memo.new_record? %> "collapse" <% else %> "collapse.in" <% end %>>
+          <%= render "memos/form", memo: @memo, post: @post %>
+        </div>
+        <div id="memo-show" class=<% if !@memo.new_record? %> "collapse.in" <% else %> "collapse" <% end %>>
+          <%= render("memos/show", memo: @memo) if !@memo.new_record? %>
         </div>
       <% end %>
     </div>

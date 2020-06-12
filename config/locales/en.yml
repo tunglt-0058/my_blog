@@ -20,3 +20,8 @@ en:
   post_delete:
     success: "投稿の削除に成功しました。"
     fail: "投稿の削除に失敗しました。"
+  memo_create:
+    fail: "メモの作成に失敗しました。"
+    existed: "メモは既に存在しています。"
+  memo_update:
+    fail: "メモの更新に失敗しました。"

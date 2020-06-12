@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   has_many :post_tags
   has_many :tags, through: :post_tags
   has_and_belongs_to_many :tags, join_table: :post_tags
+  has_many :memos, dependent: :destroy
 
   has_many :bookmarks
   has_many :bookmark_users, source: :bookmark_users, through: :bookmarks
