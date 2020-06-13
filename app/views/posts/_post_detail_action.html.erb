@@ -1,0 +1,8 @@
+<div class="pmd-card-actions">
+  <%= render "posts/action_button", post: post %>
+  <% if memo.new_record? %>
+    <button class="btn pmd-btn-flat pmd-ripple-effect btn-primary" id="create-memo-but" type="button" onclick="show_memo_form()">Create Memo</button>
+  <% else %>
+    <button class="btn pmd-btn-flat pmd-ripple-effect btn-primary collapse" id="create-memo-but" type="button" onclick="show_memo_form()">Create Memo</button>
+  <% end %>
+</div>
