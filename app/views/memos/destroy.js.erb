@@ -1,3 +1,4 @@
 $("#memo-form").html("<%= escape_javascript(render("form", memo: @memo, post: @post)) %>");
-$("#memo-form").attr("class", "collapse.in");
+$("#memo-form").attr("class", "collapse");
 $("#memo-show").attr("class", "collapse");
+$("#create-memo-but").attr("class", "btn pmd-btn-flat pmd-ripple-effect btn-primary");
