@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_074416) do
     t.text "content"
     t.string "slug"
     t.string "image"
+    t.text "example"
     t.integer "user_id", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false

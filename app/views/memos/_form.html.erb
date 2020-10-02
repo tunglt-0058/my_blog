@@ -7,7 +7,7 @@
             <%= f.submit "Update Memo", class: "btn pmd-btn-flat pmd-ripple-effect btn-primary" %>
             <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" onclick="cancel_update_memo()">Cancel</button>
         <% else %>
-            <%= f.text_area :content, placeholder: post.content,
+            <%= f.text_area :content, placeholder: "enter a memo and click enter...",
                 class: "form-control title", rows: 10, value: ""%><br>
             <%= f.submit "Create Memo", class: "btn pmd-btn-flat pmd-ripple-effect btn-primary" %>
             <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" onclick="cancel_create_memo()">Cancel</button>

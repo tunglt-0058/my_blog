@@ -6,7 +6,13 @@
       <%= render "posts/post_tag", post: @post %><br>
       <img src=<%= @post.image %> class="wp-post-image">
       <h3><%= @post.summary %></h3>
-      <p><%= @post.content %></p>
+      <div class="multiline">
+        <p><%= @post.content %></p>
+        <% if @post.example.present? %> 
+          <h3>利用例</h3>
+          <p><%= @post.example %></p>       
+        <% end %>
+      </div>
       <% if user_signed_in? %>        
         <div class="post-actions">
           <%= render "posts/post_detail_action", post: @post, memo: @memo %>
