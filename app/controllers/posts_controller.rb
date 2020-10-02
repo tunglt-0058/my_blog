@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit :title, :summary, :content, :image, :category_id, tag_ids: []
+    params.require(:post).permit :title, :summary, :content, :example, :image, :category_id, tag_ids: []
   end
 
   def find_post
