@@ -1,0 +1,18 @@
+<%= form_for tag, remote: true do |f| %>
+  <div class="post-form-errors">
+    <% if tag.errors.any? %>
+      <%= render "shared/error_messages", object: tag %>
+    <% end %>
+  </div>
+  <div class="field">
+    <label>Title: </label>
+    <%= f.text_field :title, placeholder: "Enter your title of tag",
+                     class: "form-control title" %>
+  </div>
+  <div class="actions">
+    <%= link_to "Cancel" , root_path,
+                class: "btn btn-danger btn-cancel-post" %>
+    <%= f.submit "Save", class: "btn btn-primary btn-submit-post" %>
+  </div>
+  <div class="clearfix"></div>
+<% end %>

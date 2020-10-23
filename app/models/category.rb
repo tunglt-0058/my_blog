@@ -2,6 +2,9 @@ require 'securerandom'
 
 class Category < ApplicationRecord
   has_many :posts, dependent: :destroy
+
+  validates :name, presence: true
+
   before_save :to_slug
   def to_param
     slug
