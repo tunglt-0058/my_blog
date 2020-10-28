@@ -1,0 +1,12 @@
+<section class="cards-wrapper">
+  <% @categories.each do |c| %>
+    <div class="card-grid-space">
+      <a class="card" href="/categories/<%= c.slug %>" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+        <div>
+          <h1><%= c.name.truncate(30) %></h1>
+        </div>
+      </a>
+    </div>
+  <% end %>
+  <%= will_paginate @categories, renderer: BootstrapPagination::Rails %>
+</section>

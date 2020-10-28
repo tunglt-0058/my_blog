@@ -3,6 +3,8 @@ require 'securerandom'
 class Tag < ApplicationRecord
   has_and_belongs_to_many :posts, join_table: :post_tags
 
+  validates :title, presence: true
+
   before_save :to_slug
   def to_param
     slug

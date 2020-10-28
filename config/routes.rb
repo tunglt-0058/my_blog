@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   root "posts#index"
   resources :posts, param: :slug
   resources :not_found, only: :index
-  resources :categories, only: :show, param: :slug
-  resources :tags, only: :show, param: :slug
+  resources :categories, param: :slug
+  resources :tags, param: :slug
   resources :searches, only: :index
   resources :memos, only: [:create, :edit, :update, :destroy]
   get "*path", controller: "application", action: "render_404"

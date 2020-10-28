@@ -25,3 +25,21 @@ en:
     existed: "メモは既に存在しています。"
   memo_update:
     fail: "メモの更新に失敗しました。"
+  category_create:
+    success: "カテゴリー作成が成功しました。"
+    fail: "カテゴリー作成が失敗しました。"
+  category_update:
+    success: "カテゴリーの更新に成功しました。"
+    fail: "カテゴリーの更新に失敗しました。"
+  category_delete:
+    success: "カテゴリーの削除に成功しました。"
+    fail: "カテゴリーの削除に失敗しました。"
+  tag_create:
+    success: "タグ作成が成功しました。"
+    fail: "タグ作成が失敗しました。"
+  tag_update:
+    success: "タグの更新に成功しました。"
+    fail: "タグの更新に失敗しました。"
+  tag_delete:
+    success: "の削除に成功しました。"
+    fail: "タグの削除に失敗しました。"
