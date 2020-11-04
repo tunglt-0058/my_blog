@@ -2,9 +2,9 @@ User.create(name: "Kai", email: "le.tat.tung@framgia.com", password: "tung123")
 puts "Create User"
 
 catgories = Category.create([
-                                { name: "System" },
-                                { name: "Internet" },
-                                { name: "Service" },
+                                { name: "実際にSunのPJでよく出てくるワード" },
+                                { name: "システム開発において知っておくべきワード" },
+                                { name: "流行的なワード" },
                             ])
 puts "Create categories"
 

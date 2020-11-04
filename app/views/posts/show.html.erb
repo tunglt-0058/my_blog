@@ -4,7 +4,9 @@
       <%= render "bookmarks/bookmark_icon", post: @post %><br>
       <h2><%= @post.title %></h2><br>
       <%= render "posts/post_tag", post: @post %><br>
-      <img src=<%= @post.image %> class="wp-post-image">
+      <% if @post.image.present? %>
+        <img src=<%= @post.image %> class="wp-post-image">
+      <% end %>
       <h3><%= @post.summary %></h3>
       <div class="multiline">
         <p><%= @post.content %></p>
