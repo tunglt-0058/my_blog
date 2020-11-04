@@ -13,15 +13,17 @@
       <span class="pmd-card-subtitle-text">
         <p><%= (post.content).truncate(100) %></p>
       </span>
-      <p class="post-meta">Posted by <a href="https://github.com/tunglt-0058/my_blog">Kai</a> on <%= post.created_at.strftime("%B %d %Y") %></p>
+      <p class="post-meta">Posted by <a href="https://sun-asterisk.com/"><%= post.user.name %></a> on <%= post.created_at.strftime("%B %d %Y") %></p>
     </div>
 
     <!-- Card media image -->
-    <div class="media-right media-middle">
-      <a href="javascript:void(0);">
-        <img width="152" height="152" src=<%= post.image %>>
-      </a>
-    </div>
+    <% if post.image.present? %>
+      <div class="media-right media-middle">
+        <a href="javascript:void(0);">
+          <img width="152" height="152" src=<%= post.image %>>
+        </a>
+      </div>
+    <% end %>
   </div>
   <% if current_user && current_user == post.user %>
     <%= render "posts/post_action", post: post %>

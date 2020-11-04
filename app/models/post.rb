@@ -19,7 +19,6 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :summary, presence: true
   validates :content, presence: true
-  validates :image, presence: true
 
   before_save :to_slug
 
